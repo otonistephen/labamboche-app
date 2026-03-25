@@ -1,0 +1,114 @@
+/* LocationMap.css */
+
+@import 'leaflet/dist/leaflet.css';
+@import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
+
+.location-map-section {
+  /* padding: 2rem 2rem; */
+  padding: 5rem 0;
+  /* text-align: center; */
+  background-color: #f9f9f9;
+}
+
+
+.location-map-title {
+  font-size: 3rem;
+  font-family: var(--font-josefin);
+  font-family: var(--font-mikella);
+  color: var(--primary-color);
+  
+}
+
+.location-map-container {
+  width: 100%;
+  /* max-width: 1200px; */
+  height: 30rem;
+  margin: 0 auto 4rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.location-map-address {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #555;
+  font-family: var(--font-josefin);
+}
+
+.location-map-directions-btn {
+  display: inline-block;
+  /* background-color: grey;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1.4rem 3.2rem;
+  border-radius: .8rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease; */
+
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: none;
+
+  background-color: var(--grey);
+  background-color:  #102b1f;
+  color: var(--light-color);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.location-map-directions-btn:hover {
+  background-color: rgb(67, 66, 66);
+   background-color:  #1b4733;
+}
+/* Add to your existing LocationMap.css */
+
+.location-map-subtitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 5rem 0 2rem 0;
+  color: #444;
+  font-family: var(--font-josefin);
+}
+
+.location-map-wrapper {
+  margin-bottom: 6rem;
+}
+
+.location-map-wrapper:last-child {
+  margin-bottom: 0;
+}
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400 !important;
+}
+
+/* @media (max-width: 768px) {
+  .location-map-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-map-title {
+    font-size: 28px;
+  }
+
+  .location-map-container {
+    height: 400px;
+  }
+
+  .location-map-section {
+    padding: 40px 15px;
+  }
+} */
+
+@media(min-width:768px){
+  .container-flex{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}

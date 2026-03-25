@@ -1,0 +1,116 @@
+.bakery-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.822), rgba(0, 0, 0, 0.685)),
+    url('/images/bakery.jpg') center/cover;
+  background-attachment: fixed;
+
+  background-color: #e8bdc4;
+  background-color: #4d0011;
+  padding: 5rem 0;
+}
+
+
+/* .header-image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ gap: 1rem; 
+} */
+.header-image-text .image-wrapper{
+  display: flex;
+  align-items: end;
+}
+.header-image-text .image-wrapper {
+  width: 100%;
+}
+.header-image-text h2 {
+  font-size: 3rem;
+  font-family: var(--font-dancing);
+  font-family: var(--font-mikella);
+  color: #ffd9d9;
+  color: #ffff;
+  padding-bottom: 1rem;
+}
+/* .header-image-text .image-wrapper {
+  width: 20rem; 
+
+} */
+/* .bakery-content{
+  background-color: #e8bdc4;
+} */
+.bakery-content p {
+  font-size: 1.6rem;
+  font-family: var(--font-josefin);
+  line-height: 1.5;
+  padding-bottom: 2rem;
+  color: var(--text-color);
+  color: var(--light-blue);
+  text-align: left;
+}
+/* .bakery-content-image {
+  display: flex;
+  gap: 2rem;
+} */
+
+
+/* .content-container > div:first-child {
+  flex: 0 1 40%;
+  min-width: 30rem; 
+} */
+
+.bakery-content .btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 6rem;
+  min-height: 4.8rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  /* display: block; */
+  background-color: #c06b75;
+  background-color: var(--secondary-color);
+  /* padding: 1rem 3rem; */
+  border-radius: 3rem;
+  font-family: var(--font-josefin);
+  transition: 0.5s ease;
+}
+.bakery-content .btn a:hover {
+  background-color: #c06b75;
+}
+
+.bakery-content-image {
+  display: none;
+}
+
+
+
+@media(min-width:425px){
+ .bakery-content .btn a{
+     display: flex;
+    width: auto;
+    /* margin: auto; */
+    max-width: 25rem;
+} 
+}
+@media (min-width: 768px) {
+ .content-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 13rem;
+  align-items: start;
+ padding: 2rem 0;  
+}
+ .bakery-content-image {
+  display: block;
+}
+
+
+.bakery-content-image img {
+  border-radius: 2rem;
+  width: 100%;
+  height: 35rem;
+  max-width: 30rem;
+  display: block;
+}
+}

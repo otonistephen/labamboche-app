@@ -1,0 +1,80 @@
+/* 
+.hero{
+
+  background: url(/images/cakeandmacarons.jpg),
+    linear-gradient(to right, #020000e0, #aa9699e8);
+  background-size: cover;
+
+  height: 100vh;
+  background-blend-mode: overlay;
+
+ background-position: 30% center;   
+} */
+/* .new{
+  color: #bd7880;
+  color: #4d0011;
+  color: #102b1f;
+  color: #ffd9d9;
+}
+
+.hero .container{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+} */
+
+.hero {
+  position: relative; 
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+ 
+}
+
+.hero-image {
+  object-fit: cover; /* or contain – cover is most common for hero */
+  object-position: center;
+  z-index: 1; /* behind content */
+}
+
+.hero .container {
+  display: flex;
+  position: relative; 
+  z-index: 2;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+/* Optional: dark overlay for better text readability */
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(to right, #020000e0, #1d060869);  */
+   /* background: linear-gradient(to right, #020000e0, #e9e0e100); */
+    background: linear-gradient(to right, #020000e0, #5334364b); 
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media(min-width:768px){
+  .hero{
+      background-position: bottom center;
+  }
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(to right, #020000e0, #e9e0e100)
+  ;  */
+  z-index: 1;
+  pointer-events: none;
+}
+}
+
+

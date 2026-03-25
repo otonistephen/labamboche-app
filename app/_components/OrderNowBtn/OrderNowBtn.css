@@ -1,0 +1,13 @@
+.order-now-btn {
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  border: none;
+  background-color: var(--primary-light);
+  color: var(--light-color);
+  cursor: pointer;
+  border-radius: .5rem;
+  transition: background-color 0.3s ease;
+}
+.order-now-btn:hover {
+  background-color: var(--primary-color);
+}
