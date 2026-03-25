@@ -5,7 +5,8 @@
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: #c06b75;
+  /* background-color: #c06b75; */
+  background-color: var(--secondary-color);
   width: 100%;
   height: 100vh;
   text-align: center;

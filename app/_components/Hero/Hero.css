@@ -51,30 +51,35 @@
 
 /* Optional: dark overlay for better text readability */
 
-.hero::after {
+/* .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(to right, #020000e0, #1d060869);  */
-   /* background: linear-gradient(to right, #020000e0, #e9e0e100); */
+
     background: linear-gradient(to right, #020000e0, #5334364b); 
   z-index: 1;
   pointer-events: none;
+} */
+ .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 0, 0, 0.555);
+  z-index: 2;
+  pointer-events: none;
 }
+
 
 @media(min-width:768px){
   .hero{
       background-position: bottom center;
   }
-.hero::after {
+/* .hero::after {
   content: '';
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(to right, #020000e0, #e9e0e100)
-  ;  */
   z-index: 1;
   pointer-events: none;
-}
+} */
 }
 
 

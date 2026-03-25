@@ -7,7 +7,7 @@ import HeroText from '../HeroText/HeroText';
 export default function Hero() {
   return (
     <section className='hero'>
-     
+     <div className="hero-overlay"></div>
       <Image
            src={images.cakeandmacarons}
         // src={images.cookies_gradient}

@@ -14,12 +14,12 @@
 
 } */
 
-.new {
+/* .new {
   color: #bd7880;
   color: #4d0011;
   color: #102b1f;
   color: #ffd9d9;
-}
+} */
 
 /* .hero-text .container {
   margin-top: -20rem; 
@@ -64,17 +64,17 @@
   font-size: 1.8rem;
   text-decoration: none;
   color: #fff;
-  background-color: #c06b75;
   background-color: var(--secondary-color);
+
 
   padding: 1rem 3rem;
   border-radius: 0.5rem;
   font-family: var(--font-josefin);
   transition: 0.5s ease;
 }
-.hero-content a:hover {
+/* .hero-content a:hover {
   background-color: #c06b75;
-}
+} */
 
 @media (min-width: 768px) {
   /* .hero-text .container {
