@@ -1,5 +1,5 @@
-import { firstProductsList } from "../_data/data";
 
+import {  firstProductsList } from '@/app/_data/data';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
