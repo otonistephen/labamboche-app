@@ -9,8 +9,8 @@ nav {
 
   transition: all 0.3s ease-in-out;
   background-color: #4d0011;
-  background-color: #c06b75;
-  background-color: var(--secondary-color); 
+  /* background-color: #c06b75;
+  background-color: var(--secondary-color);  */
 }
 .new {
   color: #bd7880;
