@@ -11,12 +11,14 @@ nav {
   background-color: #4d0011;
   background-color: #c06b75;
   background-color: var(--secondary-color); 
+  
 }
 .new {
   color: #bd7880;
   color: #4d0011;
   color: #102b1f;
   color: #ffd9d9;
+  color: #ff6699;
 }
 /* nav.scrolled {
   background-color: #4d0011;

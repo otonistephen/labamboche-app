@@ -9,6 +9,8 @@ import localFont from 'next/font/local';
 import 'boxicons/css/boxicons.min.css';
 import Footer from './_components/Footer/Footer';
 import ScrollToHash from './_hooks/ScrollToHarsh';
+import SnipcartProvider from './_components/SnipcartProvider/SnipcartProvider';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'La Bamboche ',
@@ -21,13 +23,6 @@ const playfairDisplay = Playfair_Display({
   display: 'swap',
   variable: '--font-playfair',
 });
-// const josefinSans = Josefin_Sans({
-//   subsets: ['latin'],
-//   weight: ['300', '400', '700'],
-//   style: ['normal', 'italic'],
-//   display: 'swap',
-//   variable: '--font-josefin',
-// });
 const josefinSans = localFont({
   src: './_font/JosefinSans-VariableFont_wght.woff2',
   display: 'swap',
@@ -49,7 +44,7 @@ const mikella = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <head>
         <link rel='preconnect' href='https://app.snipcart.com' />
         <link rel='preconnect' href='https://cdn.snipcart.com' />
@@ -64,20 +59,22 @@ export default function RootLayout({ children }) {
         <Header />
         <ScrollToHash />
         {children}
-        {process.env.NODE_ENV === 'production' && (
-          <script src='https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js'></script>
-        )}
-
-        {process.env.NODE_ENV === 'production' && (
-          <div
-            hidden
-            id='snipcart'
-            suppressHydrationWarning
-            data-api-key='YjZlNDcxYWMtM2I0ZC00MTA1LWI3Y2ItMWY4OGZjZDQ2MGJhNjM5MDQ3NTA2OTMxNTgyMDc4' // ← replace!
-            data-config-modal-style='none' // optional: sidebar instead of full page
-          ></div>
-        )}
+        {/* <SnipcartProvider>{children}</SnipcartProvider> */}
         <Footer />
+        <Script
+          src='https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js'
+          strategy='afterInteractive'
+          async
+        />
+        <div
+          hidden
+          id='snipcart'
+          suppressHydrationWarning
+          data-api-key='YjZlNDcxYWMtM2I0ZC00MTA1LWI3Y2ItMWY4OGZjZDQ2MGJhNjM5MDQ3NTA2OTMxNTgyMDc4' // ← replace!
+          data-config-modal-style='side' // optional: sidebar instead of full page
+          data-config-add-product-behavior="none"
+          data-config-show-continue-shopping="true"
+        ></div>
       </body>
     </html>
   );

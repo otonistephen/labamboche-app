@@ -59,6 +59,7 @@
      width: unset;
     position: unset;
     text-align: unset;
+    align-items: center;
    }
   .menu-list a:hover {
     color: var(--primary-color);

@@ -3,11 +3,12 @@ import { useState } from 'react';
 import { FirstCategories, firstProductsList } from '@/app/_data/data';
 import './productsContent.css';
 import Image from 'next/image';
+import { useCartStore } from '@/app/_store/cartStore';
 
 export default function ProductsContent() {
   const [click, setClick] = useState('All');
-  // const ngrokBase =
-  //   process.env.NEXT_PUBLIC_NGROK_BASE || 'http://localhost:3000';
+  // const siteUrl = 'https://labamboche-app.vercel.app';
+  const addToCart = useCartStore(state => state.addToCart);
   return (
     <div className='products-content'>
       <div className='container'>
@@ -47,16 +48,15 @@ export default function ProductsContent() {
                       <p>{list.description}</p>
                       <p>{`$ ${list.price}`}</p>
                       <button
-                        className='snipcart-add-item'
-                        data-item-id={list.id.toString()}
-                        data-item-price={list.price}
-                        // data-item-url={`/products/${list.id}`}
-                        // data-item-url={`${ngrokBase}/products/${list.
-                        // id}`}
-                        data-item-url="/"
-                        data-item-name={list.name}
-                        data-item-description={list.description}
-                        data-item-image={list.image}
+                        // className='snipcart-add-item'
+                        // data-item-id={list.id.toString()}
+                        // data-item-price={list.price}
+                        // data-item-url={`${siteUrl}/products`}
+                        // data-item-name={list.name}
+                        // data-item-description={list.description}
+                        // data-item-image={list.image}
+                        className='add-to-cart-btn'
+                        onClick={() => addToCart(list)}
                       >
                         add to cart
                       </button>
@@ -64,6 +64,7 @@ export default function ProductsContent() {
                   </div>
                 );
               }
+              return null;
             })}
           </div>
         </div>

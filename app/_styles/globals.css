@@ -12,9 +12,11 @@
 
   --primary-light: #DD2D4A;
   /* --secondary-color: rgb(128, 35, 6); */
-  --secondary-color: #F26A8D;
+  /* --secondary-color: #F26A8D; */
+  --secondary-color:#ff6699;
   --secondary-light: #F49CBB;
-  --light-blue: #CBEEF3;
+  /* --light-blue: #CBEEF3; */
+   --light-blue: #66ffcc;
 
 
   --dark-color: rgb(35, 33, 33);
